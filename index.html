@@ -4,25 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>奖金计算</title>
+
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <form id="destinations_details_form">
-        <label for="name">员工名称：</label>
-        <input type="text" id="name" placeholder="请填写员工的名字" required>
+    <main>
+        <h1>奖金计算</h1>
+        <form id="destinations_details_form">
+            <label for="name">员工名称：</label>
+            <input type="text" id="name" placeholder="请填写员工的名字" required>
 
-        <label for="location">她的营业额：</label>
-        <input type="number" id="location" placeholder="她这个月赚了多少钱" required>
+            <label for="location">她的营业额：</label>
+            <input type="number" id="location" placeholder="她这个月赚了多少钱" required>
 
-        <label for="photo">成本</label>
-        <input type="number" id="photo" placeholder="次月成本(默认5万)">
+            <label for="photo">成本</label>
+            <input type="number" id="photo" placeholder="此月成本(默认5万)">
 
-        <button type="submit">Add to list</button>
-        <input type="reset" value="Reset">
-    </form>
+            <button type="submit">Add to list</button>
+            <input type="reset" value="Reset">
+        </form>
 
-    <div>
-        <h3>她的奖金为：</h3>
-        <p>此处会显示她的奖金</p>
-    </div>
+        <div>
+            <h4>她的奖金为：</h4>
+            <p>此处会显示她的奖金</p>
+        </div>
+    </main>
 </body>
 </html>
