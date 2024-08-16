@@ -42,3 +42,19 @@ $('#calculationForm').on('submit',function(evt){
         else if(bonus.workClass === "classC"){ $('#dataTable tr td').eq(2).text(bonus.ans)}
     });
 });
+
+$('#printBtn button').on('click', function(){
+    var printContents = $('#dataTable').html(); // Get the HTML content of the table
+    var printWindow = window.open('', '', 'height=600,width=800'); // Open a new window
+
+    printWindow.document.write('<html><head><title>Print Table</title>');
+    printWindow.document.write('<style>table { width: 100%; border-collapse: collapse; } th, td { border: 1px solid black; padding: 8px; text-align: left; }</style>'); // Add basic table styles
+    printWindow.document.write('</head><body>');
+    printWindow.document.write('<table>' + printContents + '</table>'); // Write the table content
+    printWindow.document.write('</body></html>');
+    printWindow.document.close(); // Close the document
+    printWindow.focus(); // Focus on the new window
+    printWindow.print(); // Trigger the print dialog
+    printWindow.close(); // Close the print window after printing
+});
+
