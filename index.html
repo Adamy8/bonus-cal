@@ -3,20 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>奖金计算</title>
+    <title>金额计算器</title>
 
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <main>
-        <h1>奖金计算</h1>
+        <h1>金额计算器</h1>
         <form id="destinations_details_form">
-            <label for="name">员工名称：</label>
-            <input type="text" id="name" placeholder="请填写员工的名字" required>
+            <label for="classes">选择一个组别</label>
+            <select id="classes" name="classes">
+            <option value="classA" selected>A组</option>
+            <option value="classB">B组</option>
+            <option value="classC">C组</option>
+            </select>
 
-            <label for="location">她的营业额：</label>
-            <input type="number" id="location" placeholder="她这个月赚了多少钱" required>
+            <label for="location">营业额：</label>
+            <input type="number" id="location" placeholder="这个组总赚金额" required>
 
             <label for="photo">成本</label>
             <input type="number" id="photo" placeholder="此月成本(默认5万)">
@@ -26,8 +30,8 @@
         </form>
 
         <div>
-            <h4>她的奖金为：</h4>
-            <p>此处会显示她的奖金</p>
+            <h4>此组奖金为：</h4>
+            <p>此处会显示奖金额</p>
         </div>
     </main>
 </body>

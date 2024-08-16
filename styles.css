@@ -6,6 +6,7 @@ body {
     height: 100vh;
     margin: 0;
     background-image: url("images/scenery_min.jpg");
+    /* background-image: url("images/scenery.jpg"); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
