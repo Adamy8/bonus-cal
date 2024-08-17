@@ -31,7 +31,7 @@ $('#calculationForm').on('submit',function(evt){
     // output!
     bonus.ans = bonus.ans.toFixed(2);
     // console.log(bonus.ans);
-    $('#result h4').text(`${bonus.workClass}奖金为：`);
+    $('#result h4').html(`${bonus.workClass} 奖金为：`);
     $('#result p').text(bonus.ans);
     $('#result p').css({'color':'black','font-size':'large'});
 
