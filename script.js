@@ -20,14 +20,20 @@ $('#calculationForm').on('submit',function(evt){
         cost:costAmount,
         ans:0
     }
-    // const ratio = bonus.earn / bonus.cost;
-    if (bonus.earn / bonus.cost > 1.8){
-        bonus.ans = bonus.cost*0.4*0.1 + bonus.cost*0.4*0.2 + (bonus.earn-bonus.cost*1.8)*0.3;
-    }else if(bonus.earn / bonus.cost > 1.4){
-        bonus.ans = bonus.cost*0.4*0.1 + (bonus.earn-bonus.cost*1.4)*0.2;
-    }else if(bonus.earn / bonus.cost > 1){
+    // const ratio = bonus.earn / bonus.cost;    
+    if (bonus.earn / bonus.cost > 3){               //300%+  30%
+        bonus.ans = bonus.cost*0.5*0.1 + bonus.cost*0.5*0.15 + bonus.cost*0.5*0.2 + bonus.cost*0.5*0.25 + (bonus.earn-bonus.cost*3)*0.3;
+    }else if (bonus.earn / bonus.cost > 2.5){       //250%-300%   25%
+        bonus.ans = bonus.cost*0.5*0.1 + bonus.cost*0.5*0.15 + bonus.cost*0.5*0.2 + (bonus.earn-bonus.cost*2.5)*0.25;
+    }else if (bonus.earn / bonus.cost > 2){       //200%-250%    20%
+        bonus.ans = bonus.cost*0.5*0.1 + bonus.cost*0.5*0.15 + (bonus.earn-bonus.cost*2)*0.2;
+    }else if(bonus.earn / bonus.cost > 1.5){    //150%-200%     15%
+        bonus.ans = bonus.cost*0.5*0.1 + (bonus.earn-bonus.cost*1.5)*0.15;
+    }else if(bonus.earn / bonus.cost > 1){    //100%-150%       10%
         bonus.ans = (bonus.earn-bonus.cost)*0.1;
     };
+    // if(bonus.earn / bonus.cost > 3)
+
     // output!
     bonus.ans = bonus.ans.toFixed(2);
     // console.log(bonus.ans);
